@@ -1,0 +1,221 @@
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("fonts/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("fonts/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("fonts/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("fonts/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("fonts/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url("fonts/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("fonts/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: "Argesta Display";
+    src: url("fonts/ArgestaDisplay-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('https://www.marvelrealtors.com/css/fonts/icomoon.eot?t3gu5a');
+  src:  url('https://www.marvelrealtors.com/css/fonts/icomoon.eot?t3gu5a') format('embedded-opentype'),
+    url('fonts/icomoon.ttf%3Ft3gu5a') format('truetype'),
+    url('fonts/icomoon.woff%3Ft3gu5a') format('woff'),
+    url('https://www.marvelrealtors.com/css/fonts/icomoon.svg?t3gu5a') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-long:before {
+  content: "\e928";
+}
+.icon-magnifying-glass:before {
+  content: "\e900";
+}
+.icon-shopping-cart:before {
+  content: "\e901";
+}
+.icon-down-right:before {
+  content: "\e902";
+}
+.icon-idea:before {
+  content: "\e903";
+}
+.icon-badge:before {
+  content: "\e904";
+}
+.icon-group:before {
+  content: "\e905";
+}
+.icon-digital-services:before {
+  content: "\e906";
+}
+.icon-graphic-design:before {
+  content: "\e907";
+}
+.icon-technology:before {
+  content: "\e908";
+}
+.icon-mobile-app:before {
+  content: "\e909";
+}
+.icon-complete:before {
+  content: "\e90a";
+}
+.icon-award:before {
+  content: "\e90b";
+}
+.icon-recommend:before {
+  content: "\e90c";
+}
+.icon-team:before {
+  content: "\e90d";
+}
+.icon-right-arrow:before {
+  content: "\e90e";
+}
+.icon-left-arrow:before {
+  content: "\e90f";
+}
+.icon-down-arrow:before {
+  content: "\e910";
+}
+.icon-up-arrow:before {
+  content: "\e911";
+}
+.icon-color-sample:before {
+  content: "\e912";
+}
+.icon-front-end:before {
+  content: "\e913";
+}
+.icon-online-shopping:before {
+  content: "\e914";
+}
+.icon-tick:before {
+  content: "\e915";
+}
+.icon-pen-tool:before {
+  content: "\e916";
+}
+.icon-design:before {
+  content: "\e917";
+}
+.icon-graphic-design-1:before {
+  content: "\e918";
+}
+.icon-layers:before {
+  content: "\e919";
+}
+.icon-web-development:before {
+  content: "\e91a";
+}
+.icon-wreath:before {
+  content: "\e91b";
+}
+.icon-phone-call:before {
+  content: "\e91c";
+}
+.icon-plus:before {
+  content: "\e91d";
+}
+.icon-minus:before {
+  content: "\e91e";
+}
+.icon-mobile-development:before {
+  content: "\e91f";
+}
+.icon-pdf-file:before {
+  content: "\e920";
+}
+.icon-success:before {
+  content: "\e921";
+}
+.icon-job-promotion:before {
+  content: "\e922";
+}
+.icon-marketing:before {
+  content: "\e923";
+}
+.icon-close:before {
+  content: "\e924";
+}
+.icon-place:before {
+  content: "\e925";
+}
+.icon-phone:before {
+  content: "\e926";
+}
+.icon-schedule:before {
+  content: "\e927";
+}

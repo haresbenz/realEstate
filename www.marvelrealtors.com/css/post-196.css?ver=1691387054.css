@@ -1,0 +1,68 @@
+.elementor-196 .elementor-element.elementor-element-fa05e2b>.elementor-container {
+    max-width: 1200px;
+}
+
+.elementor-196 .elementor-element.elementor-element-fa05e2b>.elementor-background-overlay {
+    background-image: url("https://bracketweb.com/ogencywp/wp-content/uploads/2023/07/footer-bg-1.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #8d8d8d;
+    opacity: 1;
+}
+
+.elementor-196 .elementor-element.elementor-element-02d3244>.elementor-widget-wrap>.elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
+    margin-bottom: 0px;
+}
+
+.elementor-196 .elementor-element.elementor-element-fe285ee>.elementor-widget-container {
+    padding: 0px 15px 0px 15px;
+}
+
+.elementor-196 .elementor-element.elementor-element-9523adc>.elementor-widget-wrap>.elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
+    margin-bottom: 0px;
+}
+
+.elementor-196 .elementor-element.elementor-element-9523adc>.elementor-element-populated {
+    padding: 0px 15px 0px 15px;
+}
+
+.elementor-196 .elementor-element.elementor-element-787dbad>.elementor-widget-wrap>.elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
+    margin-bottom: 0px;
+}
+
+.elementor-196 .elementor-element.elementor-element-787dbad>.elementor-element-populated {
+    padding: 0px 15px 0px 15px;
+}
+
+.elementor-196 .elementor-element.elementor-element-93c209e>.elementor-widget-wrap>.elementor-widget:not(.elementor-widget__width-auto):not(.elementor-widget__width-initial):not(:last-child):not(.elementor-absolute) {
+    margin-bottom: 0px;
+}
+
+.elementor-196 .elementor-element.elementor-element-93c209e>.elementor-element-populated {
+    padding: 0px 15px 0px 15px;
+}
+
+.elementor-196 .elementor-element.elementor-element-9d47923>.elementor-widget-container {
+    padding: 0px 15px 0px 15px;
+}
+
+@media(min-width:768px) {
+    .elementor-196 .elementor-element.elementor-element-9523adc {
+        width: 66.66%;
+    }
+
+    .elementor-196 .elementor-element.elementor-element-787dbad {
+        width: 16.346%;
+    }
+
+    .elementor-196 .elementor-element.elementor-element-93c209e {
+        width: 16.66%;
+    }
+}
+
+@media(max-width:1024px) {
+    .elementor-196 .elementor-element.elementor-element-fa05e2b>.elementor-container {
+        max-width: 720px;
+    }
+}
