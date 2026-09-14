@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="stylesheet" href="css/index.css"> -->
+    <link rel="stylesheet" href="css/gps.css">
 
 
 
@@ -946,7 +947,171 @@
 
 
             <section class="Location" id="Location">
-                <div class="container">
+
+                <section class="drive-map-section">
+                    <div class="drive-layout">
+                        <div class="map-wrap">
+                            <div class="map" id="driveMap">
+                                <div class="map-canvas" id="mapCanvas">
+                                    <div class="map-tiles">
+                                        <!-- Column 1 -->
+                                        <img class="map-tile tile-1" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/11/875/1336.png" alt="" aria-hidden="true">
+                                        <img class="map-tile tile-2" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/11/876/1336.png" alt="" aria-hidden="true">
+                                        <img class="map-tile tile-3" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/11/877/1336.png" alt="" aria-hidden="true">
+                
+                                        <!-- Column 2 -->
+                                        <img class="map-tile tile-4" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/11/875/1337.png" alt="" aria-hidden="true">
+                                        <img class="map-tile tile-5" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/11/876/1337.png" alt="" aria-hidden="true">
+                                        <img class="map-tile tile-6" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/11/877/1337.png" alt="" aria-hidden="true">
+                
+                                        <!-- Column 3 -->
+                                        <img class="map-tile tile-7" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/11/875/1338.png" alt="" aria-hidden="true">
+                                        <img class="map-tile tile-8" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/11/876/1338.png" alt="" aria-hidden="true">
+                                        <img class="map-tile tile-9" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/11/877/1338.png" alt="" aria-hidden="true">
+                
+                                        <!-- Column 4 -->
+                                        <img class="map-tile tile-10" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/11/875/1339.png" alt="" aria-hidden="true">
+                                        <img class="map-tile tile-11" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/11/876/1339.png" alt="" aria-hidden="true">
+                                        <img class="map-tile tile-12" src="https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/11/877/1339.png" alt="" aria-hidden="true">
+                                    </div>
+                
+                                    <div class="map-wash"></div>
+                                    <div class="map-vignette"></div>
+                
+                                    <!-- Routes -->
+                                    <svg class="routes" viewBox="0 0 100 100" preserveAspectRatio="none" aria-label="Drive times from Palm Jebel Ali to key Dubai destinations">
+                                        <path class="route" d="M25.5 70.2 Q37.2 50.5 48.9 58.5"></path>
+                                        <path class="route" d="M25.5 70.2 Q31.85 59 38.2 67"></path>
+                                        <path class="route active" id="activeRoute" d="M25.5 70.2 Q51.3 18.2 77.1 26.2"></path>
+                                        <path class="route" d="M25.5 70.2 Q41 62.2 56.5 90.2"></path>
+                                        <path class="route" d="M25.5 70.2 Q38.95 35.4 52.4 43.4"></path>
+                                        <path class="route" d="M25.5 70.2 Q40 62.2 54.5 76.6"></path>
+                                        <path class="route" d="M25.5 70.2 Q51.3 18.2 77.1 26.2" style="stroke:rgba(255,255,255,.0);"></path>
+                                        <path class="route" d="M25.5 70.2 Q59.55 6.3 93.6 14.3"></path>
+                                    </svg>
+                
+                                    <!-- Origin -->
+                                    <div class="origin">
+                                        <span class="origin-label">Palm Jebel Ali</span>
+                                    </div>
+                
+                                    <!-- Destination markers -->
+                                    <button class="marker" data-name="Ibn Battuta Mall & Metro" data-time="10" style="left:48.9%; top:58.5%;" aria-label="Ibn Battuta Mall & Metro, 10 minutes">
+                                        <span class="marker-label">10 min</span>
+                                        <span class="marker-dot"></span>
+                                    </button>
+                
+                                    <button class="marker" data-name="Jebel Ali Port & Free Zone" data-time="12" style="left:38.2%; top:67%;" aria-label="Jebel Ali Port & Free Zone, 12 minutes">
+                                        <span class="marker-label">12 min</span>
+                                        <span class="marker-dot"></span>
+                                    </button>
+                
+                                    <button class="marker" data-name="Dubai Marina & JBR" data-time="22" style="left:52.7%; top:51.1%;" aria-label="Dubai Marina & JBR, 22 minutes">
+                                        <span class="marker-label">22 min</span>
+                                        <span class="marker-dot"></span>
+                                    </button>
+                
+                                    <button class="marker" data-name="Al Maktoum International Airport" data-time="22" style="left:56.5%; top:90.2%;" aria-label="Al Maktoum International Airport, 22 minutes">
+                                        <span class="marker-label">22 min</span>
+                                        <span class="marker-dot"></span>
+                                    </button>
+                
+                                    <button class="marker" data-name="Palm Jumeirah" data-time="26" style="left:52.4%; top:43.4%;" aria-label="Palm Jumeirah, 26 minutes">
+                                        <span class="marker-label">26 min</span>
+                                        <span class="marker-dot"></span>
+                                    </button>
+                
+                                    <button class="marker" data-name="Expo City Dubai" data-time="25" style="left:54.5%; top:76.6%;" aria-label="Expo City Dubai, 25 minutes">
+                                        <span class="marker-label">25 min</span>
+                                        <span class="marker-dot"></span>
+                                    </button>
+                
+                                    <button class="marker active" data-name="Downtown Dubai & Burj Khalifa" data-time="38" style="left:77.1%; top:26.2%;" aria-label="Downtown Dubai & Burj Khalifa, 38 minutes">
+                                        <span class="marker-label">38 min</span>
+                                        <span class="marker-dot"></span>
+                                    </button>
+                
+                                    <button class="marker" data-name="Dubai International Airport (DXB)" data-time="45" style="left:93.6%; top:14.3%;" aria-label="Dubai International Airport (DXB), 45 minutes">
+                                        <span class="marker-label">45 min</span>
+                                        <span class="marker-dot"></span>
+                                    </button>
+                
+                                    <!-- Selected destination panel -->
+                                    <div class="info-panel" aria-live="polite">
+                                        <p class="info-eyebrow">Approximate Drive</p>
+                                        <h1 class="info-title" id="infoTitle">
+                                            Downtown Dubai &amp; Burj Khalifa · 38 minutes
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <aside class="drive-sidebar">
+                            <ul class="destination-list" id="destinationList">
+                                <li class="destination-row">
+                                    <button type="button" data-target="Ibn Battuta Mall & Metro" data-time="10">
+                                        <span>Ibn Battuta Mall &amp; Metro</span>
+                                        <strong>10 min</strong>
+                                    </button>
+                                </li>
+                                <li class="destination-row">
+                                    <button type="button" data-target="Jebel Ali Port & Free Zone" data-time="12">
+                                        <span>Jebel Ali Port &amp; Free Zone</span>
+                                        <strong>12 min</strong>
+                                    </button>
+                                </li>
+                                <li class="destination-row">
+                                    <button type="button" data-target="Dubai Marina & JBR" data-time="22">
+                                        <span>Dubai Marina &amp; JBR</span>
+                                        <strong>22 min</strong>
+                                    </button>
+                                </li>
+                                <li class="destination-row">
+                                    <button type="button" data-target="Al Maktoum International Airport" data-time="22">
+                                        <span>Al Maktoum International Airport</span>
+                                        <strong>22 min</strong>
+                                    </button>
+                                </li>
+                                <li class="destination-row">
+                                    <button type="button" data-target="Palm Jumeirah" data-time="26">
+                                        <span>Palm Jumeirah</span>
+                                        <strong>26 min</strong>
+                                    </button>
+                                </li>
+                                <li class="destination-row">
+                                    <button type="button" data-target="Expo City Dubai" data-time="25">
+                                        <span>Expo City Dubai</span>
+                                        <strong>25 min</strong>
+                                    </button>
+                                </li>
+                                <li class="destination-row">
+                                    <button type="button" data-target="Downtown Dubai & Burj Khalifa" data-time="38">
+                                        <span>Downtown Dubai &amp; Burj Khalifa</span>
+                                        <strong>38 min</strong>
+                                    </button>
+                                </li>
+                                <li class="destination-row">
+                                    <button type="button" data-target="Dubai International Airport (DXB)" data-time="45">
+                                        <span>Dubai International Airport (DXB)</span>
+                                        <strong>45 min</strong>
+                                    </button>
+                                </li>
+                            </ul>
+                
+                            <a class="cta-button" href="#contact">
+                                Book a private island tour <span>→</span>
+                            </a>
+                
+                            <p class="map-note">
+                                Drive times are indicative, measured off-peak via Sheikh Zayed Road.
+                                Map data © OpenStreetMap contributors.
+                            </p>
+                        </aside>
+                    </div>
+                    <script src="gps.js"></script>
+                </section>
+                <!-- <div class="container">
                     <div class="row d-flex">
                         <div class="location-title">Location</div>
                         <div class=" location-line">
@@ -1037,7 +1202,7 @@
                                 </table>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
             </section>
 
 

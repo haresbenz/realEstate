@@ -1,0 +1,370 @@
+
+    :root {
+        --accent: #3f86b2;
+        --accent-dark: #2d6d98;
+        --ink: #27323a;
+        --panel: rgba(32, 45, 54, 0.94);
+        --map-w: 800.9955555555644px;
+        --map-h: 755.7746720949362px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html, body {
+        margin: 0;
+        width: 100%;
+        min-height: 100%;
+        background: #a7bdc5;
+        font-family: Arial, Helvetica, sans-serif;
+        overflow-x: hidden;
+    }
+
+    .drive-map-section {
+        width: 100%;
+        max-width: 1295px;
+        margin: 0 auto;
+        padding: 20px 15px;
+    }
+
+    /* Side-by-side Layout for Desktop */
+    .drive-layout {
+        display: flex;
+        flex-direction: row;
+        gap: 26px;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .map-wrap {
+        flex: 1 1 62%;
+        width: 62%;
+        min-width: 0;
+    }
+
+    .drive-sidebar {
+        flex: 1 1 38%;
+        width: 38%;
+        min-width: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .destination-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        border: 1px solid #d7dde0;
+        background: #fff;
+    }
+
+    .destination-row {
+        border-bottom: 1px solid #d7dde0;
+    }
+
+    .destination-row:last-child {
+        border-bottom: 0;
+    }
+
+    .destination-row button {
+        width: 100%;
+        min-height: 47px;
+        padding: 0 17px;
+        border: 0;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        text-align: left;
+        color: #27323a;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        line-height: 1.2;
+        cursor: pointer;
+        transition: background .18s ease;
+    }
+
+    .destination-row button:hover {
+        background: #f2f5f6;
+    }
+
+    .destination-row.active button {
+        background: #e8eef1;
+    }
+
+    .destination-row button span {
+        min-width: 0;
+    }
+
+    .destination-row button strong {
+        flex: 0 0 auto;
+        color: #39749d;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 16px;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    .cta-button {
+        margin-top: 20px;
+        min-height: 54px;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        background: #182e3e;
+        color: #fff;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 700;
+        box-shadow: 0 3px 8px rgba(0,0,0,.12);
+        transition: background .18s ease, transform .18s ease;
+    }
+
+    .cta-button:hover {
+        background: #213d50;
+        transform: translateY(-1px);
+    }
+
+    .cta-button span {
+        font-size: 18px;
+        line-height: 1;
+    }
+
+    .map-note {
+        margin: 13px 0 0;
+        color: #4d5960;
+        font-size: 11px;
+        line-height: 1.45;
+    }
+
+    .map {
+        position: relative;
+        display: block;
+        width: 100%;
+        aspect-ratio: 800.9955555555644 / 755.7746720949362;
+        overflow: hidden;
+        background: #a7bdc5;
+    }
+
+    .map-canvas {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: var(--map-w);
+        height: var(--map-h);
+        transform-origin: top left;
+    }
+
+    .map-tiles {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+    }
+
+    .map-tile {
+        position: absolute;
+        width: 256px;
+        height: 256px;
+        display: block;
+        user-select: none;
+        -webkit-user-drag: none;
+        pointer-events: none;
+        filter: saturate(.66) brightness(1.05) contrast(.96);
+    }
+
+    .tile-1  { left: -9.1022px;  top: -6.7129px; }
+    .tile-2  { left: -9.1022px;  top: 249.2871px; }
+    .tile-3  { left: -9.1022px;  top: 505.2871px; }
+
+    .tile-4  { left: 246.8978px; top: -6.7129px; }
+    .tile-5  { left: 246.8978px; top: 249.2871px; }
+    .tile-6  { left: 246.8978px; top: 505.2871px; }
+
+    .tile-7  { left: 502.8978px; top: -6.7129px; }
+    .tile-8  { left: 502.8978px; top: 249.2871px; }
+    .tile-9  { left: 502.8978px; top: 505.2871px; }
+
+    .tile-10 { left: 758.8978px; top: -6.7129px; }
+    .tile-11 { left: 758.8978px; top: 249.2871px; }
+    .tile-12 { left: 758.8978px; top: 505.2871px; }
+
+    .map-wash {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(rgba(151, 179, 187, .38), rgba(151, 179, 187, .38));
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    .map-vignette {
+        position: absolute;
+        inset: 0;
+        z-index: 3;
+        pointer-events: none;
+        background: linear-gradient(90deg, rgba(28, 43, 50, .10), transparent 18%, transparent 82%, rgba(28, 43, 50, .08));
+    }
+
+    .routes {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        pointer-events: none;
+    }
+
+    .route {
+        fill: none;
+        stroke: rgba(255,255,255,.78);
+        stroke-width: 1.2;
+        stroke-dasharray: 2.8 2.4;
+        vector-effect: non-scaling-stroke;
+    }
+
+    .route.active {
+        stroke: #377aa5;
+        stroke-width: 3.2;
+        stroke-dasharray: 1.6 2.4;
+        opacity: 1;
+    }
+
+    .marker {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        background: transparent;
+        cursor: pointer;
+        font: inherit;
+    }
+
+    .marker-label {
+        display: block;
+        width: max-content;
+        margin: 0 auto 4px;
+        padding: 4px 8px;
+        border-radius: 999px;
+        background: rgba(42, 48, 54, .96);
+        color: #fff;
+        font-size: 11px;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: -.15px;
+        box-shadow: 0 1px 3px rgba(0,0,0,.18);
+        white-space: nowrap;
+    }
+
+    .marker-dot {
+        display: block;
+        width: 8px;
+        height: 8px;
+        margin: 0 auto;
+        border-radius: 50%;
+        background: #fff;
+        border: 1px solid rgba(255,255,255,.9);
+        box-shadow: 0 0 0 1px rgba(0,0,0,.05);
+    }
+
+    .marker.active .marker-label {
+        background: var(--accent);
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .marker.active .marker-dot {
+        width: 10px;
+        height: 10px;
+        background: #3d7fa7;
+        border: 1.5px solid #fff;
+        box-shadow: 0 0 0 1.5px rgba(55,122,165,.45), 0 0 0 3px rgba(55,122,165,.10);
+    }
+
+    .marker:hover .marker-label {
+        background: var(--accent-dark);
+    }
+
+    .origin {
+        position: absolute;
+        left: 25.5%;
+        top: 69.2%;
+        transform: translate(-50%, -100%);
+        z-index: 11;
+        pointer-events: none;
+    }
+
+    .origin-label {
+        display: block;
+        padding: 5px 10px;
+        border-radius: 999px;
+        background: #3f82ab;
+        color: white;
+        font-size: 12px;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: -.2px;
+        white-space: nowrap;
+        box-shadow: 0 1px 3px rgba(0,0,0,.15);
+    }
+
+    .info-panel {
+        position: absolute;
+        left: 20px;
+        top: 24px;
+        z-index: 20;
+        width: 80%;
+        max-width: 500px;
+        min-height: 90px;
+        padding: 16px 20px;
+        background: var(--panel);
+        border: 2px solid rgba(180,205,213,.34);
+        box-shadow: 0 1px 5px rgba(0,0,0,.22);
+        pointer-events: none;
+    }
+
+    .info-eyebrow {
+        margin: 0 0 8px;
+        color: #a8d0dc;
+        font-size: 12px;
+        line-height: 1;
+        font-weight: 500;
+        letter-spacing: .27em;
+        text-transform: uppercase;
+    }
+
+    .info-title {
+        margin: 0;
+        color: #fff;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 22px;
+        line-height: 1.15;
+        font-weight: 700;
+        letter-spacing: -.35px;
+    }
+
+    @media (max-width: 768px) {
+        .drive-layout {
+            flex-direction: column;
+        }
+
+        .map-wrap, .drive-sidebar {
+            width: 100%;
+            flex: 1 1 100%;
+        }
+
+        .info-panel {
+            left: 10px;
+            top: 10px;
+            padding: 10px 14px;
+        }
+
+        .info-title {
+            font-size: 16px;
+        }
+    }
