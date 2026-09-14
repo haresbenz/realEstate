@@ -76,10 +76,32 @@
     const map = document.getElementById("driveMap");
     const mapCanvas = document.getElementById("mapCanvas");
 
+    // function resizeMapCanvas() {
+    //     if (!map || !mapCanvas) return;
+    //     const scale = Math.min(1, map.clientWidth / 800.9955555555644);
+    //     mapCanvas.style.transform = `scale(${scale})`;
+    // }
     function resizeMapCanvas() {
         if (!map || !mapCanvas) return;
-        const scale = Math.min(1, map.clientWidth / 800.9955555555644);
-        mapCanvas.style.transform = `scale(${scale})`;
+    
+        const MAP_WIDTH = 800.9955555555644;
+        const MAP_HEIGHT = 755.7746720949362;
+    
+        const availableWidth = map.clientWidth;
+        const availableHeight = map.clientHeight;
+    
+        const scaleX = availableWidth / MAP_WIDTH;
+        const scaleY = availableHeight / MAP_HEIGHT;
+    
+        const scale = Math.min(1, scaleX, scaleY);
+    
+        const scaledWidth = MAP_WIDTH * scale;
+    
+        // Center horizontally if there is extra space
+        const offsetX = Math.max(0, (availableWidth - scaledWidth) / 2);
+    
+        mapCanvas.style.transform =
+            `translateX(${offsetX}px) scale(${scale})`;
     }
 
     window.addEventListener("resize", resizeMapCanvas);

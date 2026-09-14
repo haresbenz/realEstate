@@ -144,11 +144,11 @@
 
     .map {
         position: relative;
-        display: block;
+        /* display: block; */
         width: 100%;
-        aspect-ratio: 800/ 700;
+        height: 700px;
         overflow: hidden;
-        background: #a7bdc5;
+        /* background: #a7bdc5; */
     }
 
     .map-canvas {
