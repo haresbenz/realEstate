@@ -129,6 +129,20 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MGSW3KPS');</script>
     <!-- End Google Tag Manager -->
+<script>
+  // Check if user already agreed
+  window.onload = function() {
+    if (localStorage.getItem("disclaimerAccepted") === "true") {
+      document.getElementById("disclaimer").style.display = "none";
+    }
+  };
+
+  // When user clicks "Yes, I Agree"
+  function acceptDisclaimer() {
+    localStorage.setItem("disclaimerAccepted", "true");
+    document.getElementById("disclaimer").style.display = "none";
+  }
+</script>
 
 </head>
 <style>
@@ -1054,11 +1068,15 @@
 		});
 
 		function openPopup() {
-			document.getElementById("banner-popup").style.display = "block";
+			   if (localStorage.getItem("disclaimerAccepted") === "true") {
+      document.getElementById("banner-popup").style.display = "none";
+    } else document.getElementById("banner-popup").style.display = "block";
 		}
 
 		function closePopup() {
+			localStorage.setItem("disclaimerAccepted", "true");
 			document.getElementById("banner-popup").style.display = "none";
+			
 		}
 	</script>
 
@@ -1082,6 +1100,8 @@
 				updated sales and
 				marketing collaterals and information.</p>
 			<button class="banner-popup-close" onclick="closePopup()">Yes, I agree</button>
+			
+
 		</div>
 	</div>
 
