@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="stylesheet" href="css/index.css"> -->
     <link rel="stylesheet" href="css/gps.css">
-
+    <link rel="stylesheet" href="css/new.css">
 
 
 <title>Marvel Realtors | Top Builders in Pune | Real Estate Developers in Pune </title>
@@ -570,7 +570,7 @@
 
 
 
-            <Section class="plans" id="plan">
+             <!-- <Section class="plans" id="plan">
                 <div class="container">
                     <div class="row d-flex">
                         <div class="Gallery-title">Plans</div>
@@ -587,7 +587,7 @@
                         <button class="next"><i class="fa fa-arrow-right"></i></button>
                     </div>
                     <div id="tab1" class="tabcontent">
-                        <!-- Owl Carousel container for Tab 1 -->
+                      
                         <div class="owl-carousel owl-theme">
                             <div class="item"><img src="img/palmJebelAli/plan1.webp" alt="Image 1"></div>
 
@@ -637,7 +637,7 @@
 
                             });
 
-                            // Bind click events to navigation buttons
+                            
                             $(".prev").click(function () {
                                 owl.trigger("prev.owl.carousel");
                             });
@@ -647,15 +647,96 @@
                             });
                         }
 
-                        // Initialize Owl Carousel for Tab 1 by default
+                       
                         $(document).ready(function () {
                             openTab(1);
                         });
                     </script>
 
                 </div>
-            </Section>
+            </Section>  -->
+            <section class="plans-section" id="plan">
 
+                <div class="container-fluid">
+            
+                    <!-- Title -->
+                    <div class="plans-heading">
+                        <h2>Plans</h2>
+                        <div class="heading-line"></div>
+                    </div>
+            
+                    <!-- Carousel -->
+                    <div class="plans-carousel-wrapper">
+            
+                        <button class="carousel-btn prev-btn" onclick="movePlans(-1)">
+                            &#10094;
+                        </button>
+            
+                        <div class="plans-carousel" id="plansCarousel">
+            
+                            <!-- PLAN 1 -->
+                            <div class="plan-card">
+                                <img src="img/plans/plan1.webp"
+                                     alt="Villa R Plan"
+                                     onclick="openPlan(this.src)">
+                            </div>
+            
+                            <!-- PLAN 2 -->
+                            <div class="plan-card">
+                                <img src="img/plans/plan2.webp"
+                                     alt="Villa C Plan"
+                                     onclick="openPlan(this.src)">
+                            </div>
+            
+                            <!-- PLAN 3 -->
+                            <div class="plan-card">
+                                <img src="img/plans/plan3.webp"
+                                     alt="Villa G Plan"
+                                     onclick="openPlan(this.src)">
+                            </div>
+            
+                            <!-- PLAN 4 -->
+                            <div class="plan-card">
+                                <img src="img/plans/plan4.webp"
+                                     alt="Villa Plan 4"
+                                     onclick="openPlan(this.src)">
+                            </div>
+            
+                            <!-- PLAN 5 -->
+                            <div class="plan-card">
+                                <img src="img/plans/plan5.webp"
+                                     alt="Villa Plan 5"
+                                     onclick="openPlan(this.src)">
+                            </div>
+            
+                        </div>
+            
+                        <button class="carousel-btn next-btn" onclick="movePlans(1)">
+                            &#10095;
+                        </button>
+            
+                    </div>
+            
+                </div> <script src="js/crousalss.js"></script>
+            </section>
+            
+            
+            <!-- ============================= -->
+            <!-- FULL SCREEN IMAGE POPUP -->
+            <!-- ============================= -->
+            
+            <div class="plan-lightbox" id="planLightbox" onclick="closePlan()">
+            
+                <button class="lightbox-close" onclick="closePlan(event)">
+                    &times;
+                </button>
+            
+                <img id="largePlanImage"
+                     src=""
+                     alt="Large Plan"
+                     onclick="event.stopPropagation()">
+            
+            </div>
 
             <section class="Amenities" id="Amenities">
                 <div class="container">

@@ -1,0 +1,275 @@
+/* ============================= */
+/* PLANS SECTION */
+/* ============================= */
+
+.plans-section {
+    width: 100%;
+    padding: 20px 0 70px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.plans-heading {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    margin: 0 auto 80px;
+    max-width: 1740px;
+    padding: 0 20px;
+}
+
+.plans-heading h2 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 400;
+    color: #292929;
+    white-space: nowrap;
+}
+
+.heading-line {
+    width: 100%;
+    height: 1px;
+    background: #cfcfcf;
+}
+
+
+/* ============================= */
+/* CAROUSEL */
+/* ============================= */
+
+.plans-carousel-wrapper {
+    position: relative;
+    max-width: 1740px;
+    margin: auto;
+    padding: 0 55px;
+}
+
+.plans-carousel {
+    display: flex;
+    gap: 15px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+
+/* ============================= */
+/* PLAN CARD */
+/* ============================= */
+
+.plan-card {
+    flex: 0 0 calc((100% - 30px) / 3);
+    cursor: pointer;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.plan-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s ease;
+}
+
+
+/* Hover effect */
+
+.plan-card:hover img {
+    transform: scale(1.03);
+}
+
+
+/* ============================= */
+/* LEFT / RIGHT BUTTONS */
+/* ============================= */
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+    border: 1px solid #999;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    font-size: 25px;
+    line-height: 1;
+
+    cursor: pointer;
+    z-index: 10;
+
+    transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background: #222;
+    color: white;
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+
+/* ============================= */
+/* FULL SCREEN LIGHTBOX */
+/* ============================= */
+
+.plan-lightbox {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.92);
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 99999;
+
+    padding: 40px;
+}
+
+.plan-lightbox.active {
+    display: flex;
+}
+
+
+/* Large image */
+
+.plan-lightbox img {
+    max-width: 95%;
+    max-height: 92vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    cursor: default;
+}
+
+
+/* Close button */
+
+.lightbox-close {
+    position: absolute;
+
+    top: 20px;
+    right: 30px;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    background: transparent;
+
+    color: white;
+
+    font-size: 45px;
+    line-height: 40px;
+
+    cursor: pointer;
+
+    z-index: 100000;
+}
+
+.lightbox-close:hover {
+    color: #ccc;
+}
+
+
+/* ============================= */
+/* TABLET */
+/* ============================= */
+
+@media (max-width: 992px) {
+
+    .plans-heading {
+        margin-bottom: 50px;
+    }
+
+    .plans-heading h2 {
+        font-size: 34px;
+    }
+
+    .plan-card {
+        flex: 0 0 calc((100% - 15px) / 2);
+    }
+
+}
+
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 600px) {
+
+    .plans-section {
+        padding-bottom: 50px;
+    }
+
+    .plans-heading {
+        gap: 15px;
+        margin-bottom: 35px;
+        padding: 0 15px;
+    }
+
+    .plans-heading h2 {
+        font-size: 28px;
+    }
+
+    .plans-carousel-wrapper {
+        padding: 0 45px;
+    }
+
+    .plans-carousel {
+        gap: 10px;
+    }
+
+    .plan-card {
+        flex: 0 0 100%;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .prev-btn {
+        left: 2px;
+    }
+
+    .next-btn {
+        right: 2px;
+    }
+
+    .plan-lightbox {
+        padding: 15px;
+    }
+
+    .plan-lightbox img {
+        max-width: 100%;
+        max-height: 90vh;
+    }
+
+    .lightbox-close {
+        top: 10px;
+        right: 15px;
+    }
+}
