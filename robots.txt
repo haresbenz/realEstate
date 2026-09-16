@@ -9,7 +9,7 @@ Disallow: *?replytocom
 Disallow: /comments/feed/
 Disallow: /mail/
 
-sitemap: http://www.marvelrealtors.com/sitemap.xml
+sitemap: http://www.Homegarealtors.com/sitemap.xml
 
 User-agent: Mediapartners-Google*
 

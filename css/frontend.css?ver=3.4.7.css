@@ -973,7 +973,7 @@ body.rtl .mfp-woosq .mfp-close {
     height: 40px;
     line-height: 40px;
     font-size: 0;
-    background-image: url(https://www.marvelrealtors.com/images/close.svg);
+    background-image: url(https://www.Homegarealtors.com/images/close.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20px 20px;
@@ -1039,7 +1039,7 @@ body.woosq-open .woosq-overlay, body.woosq-open .woosq-sidebar {
     margin-top: -16px;
     margin-left: -16px;
     content: '';
-    background-image: url("https://www.marvelrealtors.com/images/curve.svg");
+    background-image: url("https://www.Homegarealtors.com/images/curve.svg");
     background-repeat: no-repeat;
     background-position: center;
     -webkit-animation: woosq-spinner 1s linear infinite;
@@ -1136,7 +1136,7 @@ body.woosq-open .woosq-overlay, body.woosq-open .woosq-sidebar {
     right: 0;
     cursor: pointer;
     font-size: 0;
-    background-image: url("https://www.marvelrealtors.com/images/close-dark.svg");
+    background-image: url("https://www.Homegarealtors.com/images/close-dark.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 14px;
@@ -1152,6 +1152,6 @@ body.woosq-open .woosq-overlay, body.woosq-open .woosq-sidebar {
         left: unset !important;
         right: 0 !important;
         background-color: rgba(255, 255, 255, .5);
-        background-image: url(https://www.marvelrealtors.com/images/close-dark.svg);
+        background-image: url(https://www.Homegarealtors.com/images/close-dark.svg);
     }
 }
