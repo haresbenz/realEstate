@@ -1,0 +1,461 @@
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f9f9;
+        }
+
+
+        /* =========================================
+           PAYMENT PLAN SECTION
+        ========================================= */
+
+        .payment-plan {
+            width: 100%;
+            background: #f7f9f9;
+            padding: 60px 0 20px;
+            overflow: hidden;
+        }
+
+        .payment-container {
+            width: 100%;
+            padding-left: 3.3%;
+        }
+
+
+        /* =========================================
+           HEADING
+        ========================================= */
+
+        .payment-heading {
+            margin-bottom: 38px;
+        }
+
+        .payment-label {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 5px;
+            color: #477d9d;
+            margin-bottom: 16px;
+        }
+
+        .payment-heading h1 {
+            margin: 0;
+            padding: 0;
+
+            color: #142738;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 54px;
+            font-weight: 400;
+
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+
+        .payment-heading p {
+            margin-top: 18px;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 17px;
+            font-weight: 400;
+
+            color: #606972;
+        }
+
+
+        /* =========================================
+           SLIDER
+        ========================================= */
+
+        .payment-slider-wrapper {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .payment-slider {
+            display: flex;
+            align-items: stretch;
+
+            gap: 14px;
+
+            width: 100%;
+
+            overflow-x: auto;
+            overflow-y: hidden;
+
+            padding-right: 50px;
+
+            scroll-behavior: smooth;
+
+            scrollbar-width: none;
+
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .payment-slider::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        /* =========================================
+           PAYMENT CARD
+        ========================================= */
+
+        .payment-card {
+
+            flex: 0 0 240px;
+
+            width: 240px;
+            height: 130px;
+
+            background: #ffffff;
+
+            border: 1px solid #d3d9dc;
+
+            padding: 20px 22px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            transition: transform 0.25s ease;
+        }
+
+
+        /* =========================================
+           FIRST + LAST CARD BLUE
+        ========================================= */
+
+        .payment-card.fixed-blue {
+
+            background: #142a3b;
+
+            border-color: #142a3b;
+        }
+
+
+        /* =========================================
+           PERCENTAGE
+        ========================================= */
+
+        .payment-percent {
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 34px;
+
+            line-height: 1;
+
+            font-weight: 400;
+
+            color: #142738;
+
+            margin-bottom: 10px;
+        }
+
+        .payment-card.fixed-blue .payment-percent {
+
+            color: #4b82a3;
+        }
+
+
+        /* =========================================
+           TITLE
+        ========================================= */
+
+        .payment-title {
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 15px;
+
+            line-height: 1.2;
+
+            font-weight: 600;
+
+            color: #142738;
+
+            margin-bottom: 4px;
+        }
+
+        .payment-card.fixed-blue .payment-title {
+
+            color: #ffffff;
+        }
+
+
+        /* =========================================
+           DATE
+        ========================================= */
+
+        .payment-date {
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 13px;
+
+            line-height: 1.2;
+
+            color: #626b73;
+        }
+
+        .payment-card.fixed-blue .payment-date {
+
+            color: #aeb9c1;
+        }
+
+
+        /* =========================================
+           NAVIGATION
+        ========================================= */
+
+        .payment-navigation {
+
+            width: 100%;
+
+            display: flex;
+
+            justify-content: flex-end;
+
+            align-items: center;
+
+            gap: 10px;
+
+            padding-right: 3.7%;
+
+            margin-top: 30px;
+        }
+
+
+        .payment-nav {
+
+            width: 48px;
+
+            height: 48px;
+
+            border-radius: 50%;
+
+            border: 1px solid #d5dcdf;
+
+            background: transparent;
+
+            color: #172b3c;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 28px;
+
+            font-weight: 300;
+
+            line-height: 1;
+
+            cursor: pointer;
+
+            transition:
+                background 0.25s ease,
+                color 0.25s ease,
+                border-color 0.25s ease;
+        }
+
+
+        .payment-nav:hover {
+
+            background: #142a3b;
+
+            color: #ffffff;
+
+            border-color: #142a3b;
+        }
+
+
+        .payment-nav:active {
+
+            transform: scale(0.95);
+        }
+
+
+        /* =========================================
+           TABLET
+        ========================================= */
+
+        @media (max-width: 1200px) {
+
+            .payment-heading h1 {
+
+                font-size: 48px;
+            }
+
+            .payment-card {
+
+                flex-basis: 240px;
+
+                width: 240px;
+            }
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 768px) {
+
+            .payment-plan {
+
+                padding: 45px 0 20px;
+            }
+
+            .payment-container {
+
+                padding-left: 20px;
+            }
+
+
+            .payment-heading {
+
+                margin-bottom: 30px;
+
+                padding-right: 20px;
+            }
+
+
+            .payment-label {
+
+                font-size: 12px;
+
+                letter-spacing: 3px;
+
+                margin-bottom: 14px;
+            }
+
+
+            .payment-heading h1 {
+
+                font-size: 36px;
+
+                line-height: 1.02;
+
+                letter-spacing: -1px;
+            }
+
+
+            .payment-heading p {
+
+                font-size: 15px;
+
+                line-height: 1.4;
+
+                margin-top: 15px;
+            }
+
+
+            /* Mobile slider */
+
+            .payment-slider {
+
+                gap: 12px;
+
+                padding-right: 25px;
+            }
+
+
+            /* Mobile cards */
+
+            .payment-card {
+
+                flex: 0 0 220px;
+
+                width: 220px;
+
+                height: 120px;
+
+                padding: 18px 20px;
+            }
+
+
+            .payment-percent {
+
+                font-size: 32px;
+
+                margin-bottom: 8px;
+            }
+
+
+            .payment-title {
+
+                font-size: 14px;
+            }
+
+
+            .payment-date {
+
+                font-size: 12px;
+            }
+
+
+            /* Mobile navigation */
+
+            .payment-navigation {
+
+                justify-content: flex-start;
+
+                padding-right: 20px;
+
+                margin-top: 25px;
+            }
+
+
+            .payment-nav {
+
+                width: 44px;
+
+                height: 44px;
+
+                font-size: 26px;
+            }
+        }
+
+
+        /* =========================================
+           SMALL MOBILE
+        ========================================= */
+
+        @media (max-width: 480px) {
+
+            .payment-heading h1 {
+
+                font-size: 32px;
+            }
+
+
+            .payment-card {
+
+                flex: 0 0 210px;
+
+                width: 210px;
+
+                height: 115px;
+            }
+        }
+
