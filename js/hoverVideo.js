@@ -7,37 +7,37 @@
     const slides = [
 
         {
-            image: "img/coraldune.webp",
+            image: "img/palm/coraldune.webp",
             video: "videos/coralF.mp4",
             title: "Villa Coral Dune "
         },
 
         {
-            image: "img/.webp",
+            image: "img/palm/sunset miraage.webp",
             video: "videos/beachF.mp4",
             title: "Villa Sunset Mirage"
         },
 
         {
-            image: "img/palmJebelAli/3.webp",
+            image: "img/palm/sunset miraage.webp",
             video: "videos/pvtResF.mp4",
             title: "Villa Amber Reef"
         },
 
         {
-            image: "img/palmJebelAli/4.webp",
+            image: "img/palm/redaurora.webp",
             video: "videos/first.mp4",
             title: "Villa Red Aurora"
         },
 
         {
-            image: "img/palmJebelAli/5.webp",
+            image: "img/palm/rosewood.webp",
             video: "videos/video5.mp4",
             title: "Villa RedWood"
         },
 
         {
-            image: "img/palmJebelAli/6.webp",
+            image: "img/palm/porcelain.webp",
             video: "videos/video6.mp4",
             title: "Villa Porcelain Roses"
         },
