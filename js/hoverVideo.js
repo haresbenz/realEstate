@@ -8,19 +8,19 @@
 
         {
             image: "img/palmJebelAli/1.webp",
-            video: "videos/first.mp4",
+            video: "videos/beachF.mp4",
             title: "Palm Jebel Ali The Beach Collection "
         },
 
         {
             image: "img/palmJebelAli/2.webp",
-            video: "videos/first.mp4",
+            video: "videos/coralF.mp4",
             title: "Palm Jebel Ali The Coral Collection"
         },
 
         {
             image: "img/palmJebelAli/3.webp",
-            video: "videos/first.mp4",
+            video: "videos/pvtResF.mp4",
             title: "Palm Jebel Ali Central Private Residences"
         },
 
