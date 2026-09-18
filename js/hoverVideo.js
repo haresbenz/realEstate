@@ -7,40 +7,40 @@
     const slides = [
 
         {
-            image: "img/palmJebelAli/1.webp",
-            video: "videos/beachF.mp4",
-            title: "Palm Jebel Ali The Beach Collection "
+            image: "img/coraldune.webp",
+            video: "videos/coralF.mp4",
+            title: "Villa Coral Dune "
         },
 
         {
-            image: "img/palmJebelAli/2.webp",
-            video: "videos/coralF.mp4",
-            title: "Palm Jebel Ali The Coral Collection"
+            image: "img/.webp",
+            video: "videos/beachF.mp4",
+            title: "Villa Sunset Mirage"
         },
 
         {
             image: "img/palmJebelAli/3.webp",
             video: "videos/pvtResF.mp4",
-            title: "Palm Jebel Ali Central Private Residences"
+            title: "Villa Amber Reef"
         },
 
         {
             image: "img/palmJebelAli/4.webp",
             video: "videos/first.mp4",
-            title: "Dubai Lifestyle"
+            title: "Villa Red Aurora"
         },
 
-        // {
-        //     image: "img/palmJebelAli/5.webp",
-        //     video: "videos/video5.mp4",
-        //     title: "Waterfront Living"
-        // },
+        {
+            image: "img/palmJebelAli/5.webp",
+            video: "videos/video5.mp4",
+            title: "Villa RedWood"
+        },
 
-        // {
-        //     image: "img/palmJebelAli/6.webp",
-        //     video: "videos/video6.mp4",
-        //     title: "Premium Interiors"
-        // },
+        {
+            image: "img/palmJebelAli/6.webp",
+            video: "videos/video6.mp4",
+            title: "Villa Porcelain Roses"
+        },
 
         // {
         //     image: "images/gallery/image7.webp",
