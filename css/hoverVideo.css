@@ -378,3 +378,223 @@ body {
     }
 
 }
+
+/* =========================================================
+   CAROUSEL FIX FOR MAIN PROJECT
+   ========================================================= */
+
+   .media-card {
+    position: relative !important;
+    height: 625px !important;
+    overflow: hidden !important;
+    background: #07111a !important;
+    border-radius: 5px !important;
+}
+
+/* Force image to fill the complete card */
+.media-card .media-image,
+.media-card .final-image {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    max-width: none !important;
+    max-height: none !important;
+
+    object-fit: cover !important;
+    display: block !important;
+
+    z-index: 1 !important;
+}
+
+/* Video also fills complete card */
+.media-card .media-video {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    max-width: none !important;
+    max-height: none !important;
+
+    object-fit: cover !important;
+
+    z-index: 2 !important;
+}
+
+/* Dark gradient over image */
+.media-card .media-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+
+    z-index: 3 !important;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.05) 20%,
+        rgba(0, 0, 0, 0.25) 45%,
+        rgba(4, 12, 18, 0.95) 100%
+    ) !important;
+
+    pointer-events: none !important;
+}
+
+/* Text must remain visible */
+.media-card .card-content {
+    position: absolute !important;
+
+    left: 36px !important;
+    right: 30px !important;
+    bottom: 35px !important;
+
+    z-index: 5 !important;
+
+    color: #ffffff !important;
+}
+
+/* Number */
+.media-card .card-number {
+    color: #d5ae67 !important;
+
+    font-size: 16px !important;
+    font-weight: 500 !important;
+
+    letter-spacing: 4px !important;
+
+    margin-bottom: 25px !important;
+}
+
+/* Title */
+.media-card .card-title {
+    color: #ffffff !important;
+
+    font-family: Georgia, "Times New Roman", serif !important;
+
+    font-size: 30px !important;
+    line-height: 1.45 !important;
+
+    font-weight: 400 !important;
+
+    opacity: 1 !important;
+}
+
+/* Hover text */
+.media-card .video-hint {
+    color: #ffffff !important;
+
+    font-size: 11px !important;
+    letter-spacing: 2px !important;
+
+    opacity: 0 !important;
+
+    transition: all .35s ease !important;
+}
+
+.media-card:hover .video-hint {
+    opacity: 1 !important;
+}
+
+
+/* =========================================================
+   VIDEO STATE
+   ========================================================= */
+
+.media-card .media-video {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+.media-card.is-video .media-video {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.media-card.is-video .media-image {
+    opacity: 0 !important;
+}
+
+
+/* =========================================================
+   FINAL IMAGE AFTER VIDEO
+   ========================================================= */
+
+.media-card .final-image {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+.media-card.video-finished .media-image {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+.media-card.video-finished .media-video {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+.media-card.video-finished .final-image {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+
+/* =========================================================
+   IMPORTANT - PREVENT BOOTSTRAP FROM SHRINKING IMAGES
+   ========================================================= */
+
+.media-card img {
+    max-width: none !important;
+    height: 100% !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .media-card {
+        height: 550px !important;
+    }
+
+    .media-card .card-title {
+        font-size: 27px !important;
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    .media-card {
+        height: 480px !important;
+    }
+
+    .media-card .card-content {
+        left: 25px !important;
+        bottom: 28px !important;
+    }
+
+    .media-card .card-title {
+        font-size: 24px !important;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .media-card {
+        height: 450px !important;
+    }
+
+    .media-card .card-title {
+        font-size: 22px !important;
+    }
+
+}
