@@ -1,0 +1,559 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background: #f5f6f3;
+    color: #16231f;
+}
+
+/* ==============================
+   SECTION
+============================== */
+
+.payment-section {
+    position: relative;
+    width: 100%;
+    padding: 70px 7vw 80px;
+    overflow: hidden;
+}
+
+/* subtle background curves */
+
+.payment-section::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border: 1px solid rgba(157,119,63,.35);
+    border-radius: 50%;
+    left: -300px;
+    top: -300px;
+}
+
+.payment-section::after {
+    content: "";
+    position: absolute;
+    width: 430px;
+    height: 430px;
+    border: 1px solid rgba(157,119,63,.3);
+    border-radius: 50%;
+    right: -300px;
+    bottom: -320px;
+}
+
+.payment-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1280px;
+    margin: auto;
+}
+
+
+/* ==============================
+   SMALL LABEL
+============================== */
+
+.payment-label {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #a47c48;
+    margin-bottom: 25px;
+}
+
+.payment-label::after {
+    content: "";
+    width: 85px;
+    height: 1px;
+    background: #b59a75;
+}
+
+
+/* ==============================
+   HEADING
+============================== */
+
+.payment-heading {
+    max-width: 720px;
+
+    font-size: clamp(38px, 4vw, 58px);
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: -2.5px;
+
+    margin-bottom: 55px;
+
+    color: #14231e;
+}
+
+
+/* ==============================
+   GRID
+============================== */
+
+.payment-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.35fr)
+        minmax(330px, .85fr);
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+
+/* ==============================
+   LEFT PAYMENT LIST
+============================== */
+
+.payment-list {
+    width: 100%;
+}
+
+.payment-row {
+    display: grid;
+
+    grid-template-columns:
+        125px
+        minmax(0, 1fr)
+        60px;
+
+    column-gap: 15px;
+
+    margin-bottom: 22px;
+
+    align-items: center;
+}
+
+.payment-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.payment-name {
+    font-size: 15px;
+    line-height: 1.2;
+    color: #34413c;
+    white-space: nowrap;
+}
+
+.payment-date {
+    font-family: monospace;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: .5px;
+    color: #7c8580;
+    white-space: nowrap;
+}
+
+.payment-percent {
+    font-family: monospace;
+    font-size: 14px;
+    text-align: right;
+    color: #26332e;
+}
+
+/* ==============================
+   BARS
+============================== */
+
+.bar-wrapper {
+    height: 22px;
+
+    border-radius: 50px;
+
+    background: #e4e8e5;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.bar {
+    height: 100%;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #164d3c,
+            #326b58
+        );
+
+    position: relative;
+
+    animation:
+        barGlow 4s ease-in-out infinite;
+}
+
+
+/* percentages */
+
+.bar-10 {
+    width: 10%;
+}
+
+.bar-5 {
+    width: 5%;
+}
+
+.bar-70 {
+    width: 70%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #88642f,
+            #b28a4a
+        );
+}
+
+
+/* subtle moving shine */
+
+.bar::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -80px;
+
+    width: 60px;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.35),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    animation: shine 4s ease-in-out infinite;
+}
+
+@keyframes shine {
+
+    0% {
+        left: -80px;
+    }
+
+    45% {
+        left: 110%;
+    }
+
+    100% {
+        left: 110%;
+    }
+}
+
+@keyframes barGlow {
+
+    0%,100% {
+        filter: brightness(1);
+    }
+
+    50% {
+        filter: brightness(1.08);
+    }
+}
+
+
+/* ==============================
+   RIGHT CARD
+============================== */
+
+.payment-card {
+
+    background: rgba(255,255,255,.92);
+
+    border: 1px solid rgba(0,0,0,.05);
+
+    border-radius: 22px;
+
+    padding: 25px 30px;
+
+    box-shadow:
+        0 20px 50px rgba(35,45,40,.07);
+
+    backdrop-filter: blur(10px);
+
+    transition:
+        transform .5s ease,
+        box-shadow .5s ease;
+}
+
+.payment-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 25px 60px rgba(35,45,40,.11);
+}
+
+
+/* card rows */
+
+.card-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    min-height: 68px;
+
+    border-bottom:
+        1px solid #e3e5e3;
+}
+
+.card-row:last-child {
+    border-bottom: none;
+}
+
+
+.card-label {
+    font-size: 15px;
+    color: #53605a;
+}
+
+.card-value {
+    font-size: 23px;
+    font-weight: 400;
+    color: #15221e;
+}
+
+
+/* ==============================
+   DESCRIPTION
+============================== */
+
+.payment-description {
+
+    max-width: 480px;
+
+    margin-top: 24px;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: #707a74;
+}
+
+
+/* ==============================
+   BUTTON
+============================== */
+
+.schedule-button {
+
+    position: relative;
+
+    margin-top: 22px;
+
+    padding: 14px 26px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: #102d23;
+
+    color: white;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.schedule-button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(16,45,35,.2);
+}
+
+
+/* button shine */
+
+.schedule-button::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 70%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            100deg,
+            transparent,
+            rgba(255,255,255,.18),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    animation: buttonShine 5s infinite;
+}
+
+@keyframes buttonShine {
+
+    0% {
+        left: -100%;
+    }
+
+    40%,100% {
+        left: 130%;
+    }
+}
+
+
+/* ==============================
+   DESKTOP COMPACT
+============================== */
+
+@media (min-width: 1200px) {
+
+    .payment-section {
+        padding-left: 8vw;
+        padding-right: 8vw;
+    }
+
+    .payment-heading {
+        font-size: 54px;
+    }
+
+    .payment-grid {
+        gap: 90px;
+    }
+}
+
+
+/* ==============================
+   TABLET
+============================== */
+
+@media (max-width: 900px) {
+
+    .payment-section {
+        padding: 55px 30px;
+    }
+
+    .payment-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .payment-card {
+        max-width: 600px;
+    }
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 600px) {
+
+    .payment-section {
+        padding: 45px 20px;
+    }
+
+    .payment-heading {
+        font-size: 36px;
+        letter-spacing: -1.5px;
+        margin-bottom: 40px;
+    }
+
+    .payment-grid {
+        gap: 35px;
+    }
+
+    .payment-row {
+
+        grid-template-columns:
+            100px
+            minmax(0,1fr)
+            45px;
+
+        column-gap: 8px;
+
+        margin-bottom: 20px;
+    }
+
+    .payment-name {
+        font-size: 12px;
+    }
+
+    .payment-date {
+        font-size: 10px;
+    }
+
+    .payment-percent {
+        font-size: 12px;
+    }
+
+    .bar-wrapper {
+        height: 18px;
+    }
+
+    .payment-card {
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    .card-row {
+        min-height: 58px;
+    }
+
+    .card-label {
+        font-size: 13px;
+    }
+
+    .card-value {
+        font-size: 19px;
+    }
+
+    .payment-description {
+        font-size: 13px;
+    }
+
+    .schedule-button {
+        width: 100%;
+    }
+}
