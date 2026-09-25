@@ -13,13 +13,13 @@
         },
 
         {
-            image: "img/palm/sunset miraage.webp",
+            image: "img/palm/sunsetMiraage.webp",
             video: "videos/beachF.mp4",
             title: "Villa Sunset Mirage"
         },
 
         {
-            image: "img/palm/sunset miraage.webp",
+            image: "img/palm/Amberreef.webp",
             video: "videos/pvtResF.mp4",
             title: "Villa Amber Reef"
         },
